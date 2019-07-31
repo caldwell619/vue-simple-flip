@@ -1,13 +1,12 @@
 {
 	"name": "vue-simple-flip",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "dist/vue-simple-flip.ssr.js",
 	"module": "dist/vue-simple-flip.esm.js",
 	"unpkg": "dist/vue-simple-flip.min.js",
 	"files": [
-		"dist/*",
-		"src/vue-simple-flip.vue"
+		"dist/*"
 	],
 	"scripts": {
 		"build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",

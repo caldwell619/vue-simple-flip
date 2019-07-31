@@ -27,7 +27,8 @@ export default {
         height: this.height,
         width: this.width,
         backgroundColor: this.backgroundColor || "#ffffff",
-        color: this.textColor || "black"
+        color: this.textColor || "black",
+        overflow: scroll
       }
     };
   },
@@ -117,7 +118,7 @@ export default {
 }
 .flip-cta-cont {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 1%;
+  right: 1%;
 }
 </style>
