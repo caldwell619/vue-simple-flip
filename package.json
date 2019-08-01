@@ -1,13 +1,20 @@
 {
 	"name": "vue-simple-flip",
 	"version": "1.0.2",
-	"description": "",
+	"description": "Very simple, yet configurable card flipping Vue component",
 	"main": "dist/vue-simple-flip.ssr.js",
 	"module": "dist/vue-simple-flip.esm.js",
 	"unpkg": "dist/vue-simple-flip.min.js",
 	"files": [
 		"dist/*"
-	],
+  ],
+  "homepage": "https://github.com/caldwell619/vue-simple-flip/README.md",
+  "bugs": "https://github.com/caldwell619/vue-simple-flip/issues",
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:caldwell619/vue-simple-flip.git"
+  },
+  "author": "caldwell619",
 	"scripts": {
 		"build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
 		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",

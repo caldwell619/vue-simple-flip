@@ -83,7 +83,7 @@ Example:
 
 ```js
 <template>
-  <FlipCard height="400px" width="300px" 
+  <FlipCard height="400px" width="300px"
      backgroundColor="#ffffff" color="#f3f3f3">
     <template slot="front">
       <div>
