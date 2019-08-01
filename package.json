@@ -7,19 +7,20 @@
 	"unpkg": "dist/vue-simple-flip.min.js",
 	"files": [
 		"dist/*"
-  ],
-  "homepage": "https://github.com/caldwell619/vue-simple-flip/README.md",
-  "bugs": "https://github.com/caldwell619/vue-simple-flip/issues",
-  "repository": {
-    "type" : "git",
-    "url" : "git@github.com:caldwell619/vue-simple-flip.git"
-  },
-  "author": "caldwell619",
+	],
+	"homepage": "https://github.com/caldwell619/vue-simple-flip",
+	"bugs": "https://github.com/caldwell619/vue-simple-flip/issues",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:caldwell619/vue-simple-flip.git"
+	},
+	"author": "caldwell619",
 	"scripts": {
 		"build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
 		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
 		"build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "release": "standard-version"
 	},
 	"dependencies": {},
 	"devDependencies": {
@@ -31,6 +32,7 @@
 		"rollup-plugin-replace": "^2.2.0",
 		"rollup-plugin-terser": "^4.0.4",
 		"rollup-plugin-vue": "^5.0.0",
+		"standard-version": "^7.0.0",
 		"vue": "^2.6.10",
 		"vue-template-compiler": "^2.6.10"
 	}
