@@ -53,7 +53,7 @@ Currently, 4 styling props are supported, all are type `String`.
 1. Height: `height`
 2. Width: `width`
 3. Background Color: `backgroundColor`
-4. Color: `color`
+4. Color: `textColor`
 
 Example:
 
