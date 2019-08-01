@@ -1,6 +1,6 @@
 <template>
   <div class="content-window">
-    <FlipCard height="400px" width="300px" textColor="red" backgroundColor="red">
+    <FlipCard height="400px" width="300px" textColor="red" backgroundColor="green">
       <template slot="front">
         <div class="card-face">
           <h1>Buy Now?</h1>

@@ -22,15 +22,17 @@ export default {
   name: "FlipCard",
   data() {
     return {
-      flipped: false,
-      styles: {
-        height: this.height,
-        width: this.width,
-        backgroundColor: this.backgroundColor || "#ffffff",
-        color: this.textColor || "black",
-        overflow: scroll
-      }
+      flipped: false
     };
+  },
+  computed: {
+    styles: () => ({
+      height: this.height,
+      width: this.width,
+      backgroundColor: this.backgroundColor || "#ffffff",
+      color: this.textColor || "black",
+      overflow: scroll
+    })
   },
   props: {
     height: String,
