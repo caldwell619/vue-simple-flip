@@ -25,24 +25,25 @@ export default {
       flipped: false
     };
   },
-  computed: {
-    styles: () => ({
-      height: this.height,
-      width: this.width,
-      backgroundColor: this.backgroundColor || "#ffffff",
-      color: this.textColor || "black",
-      overflow: scroll
-    })
-  },
   props: {
     height: String,
     width: String,
     backgroundColor: String,
     textColor: String
   },
+  computed: {
+    styles() {
+      return {
+        height: this.height,
+        width: this.width,
+        backgroundColor: this.backgroundColor || "#ffffff",
+        color: this.textColor || "black",
+        overflow: scroll
+      };
+    }
+  },
   methods: {
     flip() {
-      console.log("this.height: ", this.height);
       this.flipped = !this.flipped;
     }
   }
