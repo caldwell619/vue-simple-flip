@@ -22,13 +22,7 @@ var script = {
   name: "FlipCard",
   data: function data() {
     return {
-      flipped: false,
-      styles: {
-        height: this.height,
-        width: this.width,
-        backgroundColor: this.backgroundColor || "#ffffff",
-        color: this.textColor || "black"
-      }
+      flipped: false
     };
   },
   props: {
@@ -37,9 +31,23 @@ var script = {
     backgroundColor: String,
     textColor: String
   },
+  computed: {
+    styles: function styles() {
+      console.log("this.height: ", this.height);
+      console.log("this.backgroundColor: ", this.backgroundColor);
+      console.log("this.width: ", this.width);
+      console.log("this.height: ", this.height);
+      return {
+        height: this.height,
+        width: this.width,
+        backgroundColor: this.backgroundColor || "#ffffff",
+        color: this.textColor || "black",
+        overflow: scroll
+      };
+    }
+  },
   methods: {
     flip: function flip() {
-      console.log("this.height: ", this.height);
       this.flipped = !this.flipped;
     }
   }
@@ -186,13 +194,13 @@ var __vue_staticRenderFns__ = [];
   /* style */
   var __vue_inject_styles__ = function (inject) {
     if (!inject) { return }
-    inject("data-v-c3ec57a0_0", { source: ".flip-container[data-v-c3ec57a0]{-webkit-perspective:1000;-moz-perspective:1000;-o-perspective:1000;perspective:1000}.flip-container[data-v-c3ec57a0]{min-height:120px}.flipper[data-v-c3ec57a0]{-moz-transform:perspective(1000px);-moz-transform-style:preserve-3d;position:relative}.back[data-v-c3ec57a0],.front[data-v-c3ec57a0]{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;-webkit-transition:.6s;-webkit-transform-style:preserve-3d;-moz-transition:.6s;-moz-transform-style:preserve-3d;-o-transition:.6s;-o-transform-style:preserve-3d;-ms-transition:.6s;-ms-transform-style:preserve-3d;transition:.6s;transform-style:preserve-3d;top:0;left:0;width:100%;position:relative;padding:20px;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 3px 7px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.back[data-v-c3ec57a0]{-webkit-transform:rotateY(-180deg);-moz-transform:rotateY(-180deg);-o-transform:rotateY(-180deg);-ms-transform:rotateY(-180deg);transform:rotateY(-180deg);position:absolute}.flip-container.flipped .back[data-v-c3ec57a0]{-webkit-transform:rotateY(0);-moz-transform:rotateY(0);-o-transform:rotateY(0);-ms-transform:rotateY(0);transform:rotateY(0)}.flip-container.flipped .front[data-v-c3ec57a0]{-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-o-transform:rotateY(180deg);-ms-transform:rotateY(180deg);transform:rotateY(180deg)}.front[data-v-c3ec57a0]{z-index:2}.flip-cta-cont[data-v-c3ec57a0]{position:absolute;bottom:0;right:0}", map: undefined, media: undefined });
+    inject("data-v-086dbcfe_0", { source: ".flip-container[data-v-086dbcfe]{-webkit-perspective:1000;-moz-perspective:1000;-o-perspective:1000;perspective:1000}.flip-container[data-v-086dbcfe]{min-height:120px}.flipper[data-v-086dbcfe]{-moz-transform:perspective(1000px);-moz-transform-style:preserve-3d;position:relative}.back[data-v-086dbcfe],.front[data-v-086dbcfe]{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;-webkit-transition:.6s;-webkit-transform-style:preserve-3d;-moz-transition:.6s;-moz-transform-style:preserve-3d;-o-transition:.6s;-o-transform-style:preserve-3d;-ms-transition:.6s;-ms-transform-style:preserve-3d;transition:.6s;transform-style:preserve-3d;top:0;left:0;width:100%;position:relative;padding:20px;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 3px 7px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.back[data-v-086dbcfe]{-webkit-transform:rotateY(-180deg);-moz-transform:rotateY(-180deg);-o-transform:rotateY(-180deg);-ms-transform:rotateY(-180deg);transform:rotateY(-180deg);position:absolute}.flip-container.flipped .back[data-v-086dbcfe]{-webkit-transform:rotateY(0);-moz-transform:rotateY(0);-o-transform:rotateY(0);-ms-transform:rotateY(0);transform:rotateY(0)}.flip-container.flipped .front[data-v-086dbcfe]{-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-o-transform:rotateY(180deg);-ms-transform:rotateY(180deg);transform:rotateY(180deg)}.front[data-v-086dbcfe]{z-index:2}.flip-cta-cont[data-v-086dbcfe]{position:absolute;bottom:1%;right:1%}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__ = "data-v-c3ec57a0";
+  var __vue_scope_id__ = "data-v-086dbcfe";
   /* module identifier */
-  var __vue_module_identifier__ = "data-v-c3ec57a0";
+  var __vue_module_identifier__ = "data-v-086dbcfe";
   /* functional template */
   var __vue_is_functional_template__ = false;
 
