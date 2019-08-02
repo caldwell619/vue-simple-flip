@@ -55,12 +55,23 @@ Currently, 4 styling props are supported, all are type `String`.
 3. Background Color: `backgroundColor`
 4. Color: `textColor`
 
-Example:
+Example with fixed values:
 
 ```js
 <template>
   <FlipCard height="400px" width="300px"
     backgroundColor="#ffffff" color="#f3f3f3">
+    // slots
+  </FlipCard>
+</template>
+```
+
+Example with dynamic values:
+
+```js
+<template>
+  <FlipCard :height="height" :width="width"
+    :backgroundColor="chosenBackgroundColor" :color="chosenFontColor">
     // slots
   </FlipCard>
 </template>

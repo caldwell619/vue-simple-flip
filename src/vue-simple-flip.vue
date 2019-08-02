@@ -33,6 +33,10 @@ export default {
   },
   computed: {
     styles() {
+      console.log("this.height: ", this.height);
+      console.log("this.backgroundColor: ", this.backgroundColor);
+      console.log("this.width: ", this.width);
+      console.log("this.height: ", this.height);
       return {
         height: this.height,
         width: this.width,
