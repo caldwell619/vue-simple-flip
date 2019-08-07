@@ -121,6 +121,7 @@ export default {
 }
 .flip-cta-cont {
   position: absolute;
+  z-index: 10000000000000000000000000000000000000;
   bottom: 1%;
   right: 1%;
 }
