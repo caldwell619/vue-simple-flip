@@ -1,6 +1,6 @@
 {
 	"name": "@swbc/vue-simple-flip",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Very simple, yet configurable card flipping Vue component",
 	"main": "dist/vue-simple-flip.ssr.js",
 	"module": "dist/vue-simple-flip.esm.js",
