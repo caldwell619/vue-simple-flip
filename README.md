@@ -7,7 +7,7 @@ This package is very simple, yet configurable card flipping Vue component.
 To install in your project, run:
 
 ```js
-npm i vue-simple-flip -S
+npm i @swbc/vue-simple-flip -S
 ```
 
 ## Configuration
@@ -15,7 +15,7 @@ npm i vue-simple-flip -S
 In the component you wish the card to be, right below the script tag, add:
 
 ```js
-import FlipCard from "vue-simple-flip";
+import FlipCard from "@swbc/vue-simple-flip";
 ```
 
 Naming convention is obviously up to you.
