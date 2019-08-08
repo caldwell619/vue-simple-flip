@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/caldwell619/vue-simple-flip/compare/v1.0.2...v1.0.4) (2019-08-08)
+
+
+### Bug Fixes
+
+* making pointer a cursor over the flip ([876ab0e](https://github.com/caldwell619/vue-simple-flip/commit/876ab0e))
+* removed built in padding ([e25abe9](https://github.com/caldwell619/vue-simple-flip/commit/e25abe9))
+
 ### [1.0.3](https://github.com/caldwell619/vue-simple-flip/compare/v1.0.2...v1.0.3) (2019-08-07)
 
 
