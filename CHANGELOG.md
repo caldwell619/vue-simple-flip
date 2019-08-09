@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/caldwell619/vue-simple-flip/compare/v1.0.4...v1.0.5) (2019-08-09)
+
+
+### Bug Fixes
+
+* border radius configurable as prop ([5717833](https://github.com/caldwell619/vue-simple-flip/commit/5717833))
+
 ### [1.0.4](https://github.com/caldwell619/vue-simple-flip/compare/v1.0.2...v1.0.4) (2019-08-08)
 
 
