@@ -29,7 +29,8 @@ export default {
     height: String,
     width: String,
     backgroundColor: String,
-    textColor: String
+    textColor: String,
+    borderRadius: String
   },
   computed: {
     styles() {
@@ -38,7 +39,8 @@ export default {
         width: this.width,
         backgroundColor: this.backgroundColor || "#ffffff",
         color: this.textColor || "black",
-        overflow: scroll
+        overflow: scroll,
+        borderRadius: this.borderRadius
       };
     }
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="content-window">
-    <FlipCard>
+    <FlipCard borderRadius="3px">
       <template slot="front">
         <div class="card-face">
           <h1>Buy Now?</h1>
@@ -56,8 +56,9 @@ export default {
   align-items: center;
 }
 .card-face {
-  height: 350px;
-  width: 100%;
+  height: 400px;
+  width: 300px;
+  border-radius: 3px;
   background-color: green;
 }
 </style>
