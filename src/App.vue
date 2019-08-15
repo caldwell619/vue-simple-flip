@@ -1,45 +1,33 @@
 <template>
   <div class="content-window">
-    <FlipCard borderRadius="3px">
-      <template slot="front">
-        <div class="card-face">
-          <h1>Buy Now?</h1>
-        </div>
-      </template>
-      <template slot="cta-slot-front">
-        <button>CLICK ME!</button>
-      </template>
-      <template slot="back">
-        <div class="card-face">
-          <h1>Buy Later.</h1>
-          <ul>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-            <li>Coverage</li>
-          </ul>
-        </div>
-      </template>
-      <template slot="cta-slot-back">
-        <button>CLICK ME!</button>
-      </template>
-    </FlipCard>
+    <div class="first-cont">
+      <Collapse>
+        <template slot="title">
+          <div>
+            <button>Click</button>
+          </div>
+        </template>
+        <template slot="title-cta">
+          <div>
+            <button>Click</button>
+          </div>
+        </template>
+        <template slot="content">
+          <div class="given-content">
+            <p>Here is some excellent content Here is some excellent content</p>
+          </div>
+        </template>
+      </Collapse>
+    </div>
   </div>
 </template>
 
 <script>
-import FlipCard from "./vue-simple-flip.vue";
+import Collapse from "./accordion.vue";
 export default {
   name: "app",
   components: {
-    FlipCard
+    Collapse
   },
   data: function() {
     return {};
@@ -55,10 +43,13 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.card-face {
-  height: 400px;
-  width: 300px;
-  border-radius: 3px;
-  background-color: green;
+.first-cont {
+  height: 200px;
+}
+.given-content {
+  height: 200px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
 }
 </style>
