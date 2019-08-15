@@ -1,36 +1,33 @@
 <template>
   <div class="content-window">
-    <div class="first-cont">
-      <Collapse>
-        <template slot="title">
-          <div>
-            <button>Click</button>
-          </div>
-        </template>
-        <template slot="title-cta">
-          <div>
-            <button>Click</button>
-          </div>
-        </template>
-        <template slot="content">
-          <div class="given-content">
-            <p>Here is some excellent content Here is some excellent content</p>
-          </div>
-        </template>
-      </Collapse>
-    </div>
+      <Collapse/>
   </div>
 </template>
 
 <script>
-import Collapse from "./accordion.vue";
+import Collapse from "./components/AccoridonList.vue";
 export default {
   name: "app",
   components: {
     Collapse
   },
   data: function() {
-    return {};
+    return {
+      items: [
+        {
+          title: "hello",
+          cta: "Click",
+          content:
+            "Here is some excellent content Here is some excellent content"
+        },
+        {
+          title: "hello",
+          cta: "Click",
+          content:
+            "Here is some excellent content Here is some excellent content"
+        }
+      ]
+    };
   }
 };
 </script>

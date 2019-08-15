@@ -1,5 +1,5 @@
 <template>
-  <div @click="newToggle" class="1">
+  <div  class="1">
     <div :class="`${activeClass} accordion`">
       <div class="title-cont">
         <div class="title">
@@ -18,9 +18,16 @@
 
 <script>
 export default {
+  props: {
+    open: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
   data() {
     return {
-      open: false,
+      showDropDown: this.open,
       elementHeight: 0
     };
   },
@@ -29,7 +36,7 @@ export default {
       const panelHeight = this.$el.querySelector(".panel").firstChild
         .scrollHeight;
       this.elementHeight = panelHeight;
-      this.open = !this.open;
+      this.showDropDown = !this.showDropDown;
     }
   },
   computed: {
@@ -39,6 +46,11 @@ export default {
     activeClass() {
       return this.open ? "active" : "";
     }
+  },
+  mounted(){
+    const panelHeight = this.$el.querySelector(".panel").firstChild
+        .scrollHeight;
+      this.elementHeight = panelHeight;
   }
 };
 </script>

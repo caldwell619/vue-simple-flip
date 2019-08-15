@@ -1,11 +1,13 @@
-// Import vue component
-import component from './vue-simple-flip.vue';
+// Import vue components
+import FlipComponent from './components/vue-simple-flip.vue';
+import AccordionComponent from './components/accordion.vue';
 
 // install function executed by Vue.use()
-function install(Vue) {
+const install = Vue => {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('VueSimpleFlip', component);
+  Vue.component('VueSimpleFlip', FlipComponent);
+  Vue.component('VueAccordion', AccordionComponent);
 }
 
 // Create module definition for Vue.use()
@@ -27,10 +29,12 @@ if (GlobalVue) {
 
 // Inject install function into component - allows component
 // to be registered via Vue.use() as well as Vue.component()
-component.install = install;
+FlipComponent.install = install;
+AccordionComponent.install = install;
 
-// Export component by default
-export default component;
+// Export components
+export const FlipCard = FlipComponent;
+export const Accordion = AccordionComponent;
 
 // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
