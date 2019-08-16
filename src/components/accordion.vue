@@ -1,5 +1,5 @@
 <template>
-  <div  class="1">
+  <div class="accordion-root">
     <div :class="`${activeClass} accordion`">
       <div class="title-cont">
         <div class="title">
@@ -47,10 +47,10 @@ export default {
       return this.open ? "active" : "";
     }
   },
-  mounted(){
+  mounted() {
     const panelHeight = this.$el.querySelector(".panel").firstChild
-        .scrollHeight;
-      this.elementHeight = panelHeight;
+      .scrollHeight;
+    this.elementHeight = panelHeight;
   }
 };
 </script>
