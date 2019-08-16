@@ -44,7 +44,7 @@ export default {
   height: 200px;
 }
 .given-content {
-  height: 200px;
+  height: 100px;
   background-color: blue;
   display: flex;
   justify-content: center;
