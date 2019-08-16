@@ -1,32 +1,32 @@
 <template>
-    <div class="first-cont">
-      <div v-for="(item, index) in items" :key="index" @click="openDrawer(index)">
-        <Collapse :open="openDrawerIndex === index">
-          <template slot="title">
-            <div>
-              <p>{{item.title}}</p>
-            </div>
-          </template>
-          <template slot="title-cta">
-            <div>
-              <button>{{item.cta}}</button>
-            </div>
-          </template>
-          <template slot="content">
-            <div class="given-content">
-              <p>{{item.content}}</p>
-            </div>
-          </template>
-        </Collapse>
-      </div>
+  <div class="first-cont">
+    <div v-for="(item, index) in items" :key="index" @click="openDrawer(index)">
+      <Accordion :open="openDrawerIndex === index">
+        <template slot="title">
+          <div>
+            <p>{{item.title}}</p>
+          </div>
+        </template>
+        <template slot="title-cta">
+          <div>
+            <button>{{item.cta}}</button>
+          </div>
+        </template>
+        <template slot="content">
+          <div class="given-content">
+            <p>{{item.content}}</p>
+          </div>
+        </template>
+      </Accordion>
+    </div>
   </div>
 </template>
 
 <script>
-import Collapse from "./accordion.vue";
+import Accordion from "./Accordion.vue";
 export default {
   components: {
-    Collapse
+    Accordion
   },
   data() {
     return {
@@ -49,10 +49,10 @@ export default {
   },
 
   methods: {
-    openDrawer(drawerIndex){
-      drawerIndex === this.openDrawerIndex ?
-      this.openDrawerIndex = null :
-      this.openDrawerIndex = drawerIndex 
+    openDrawer(drawerIndex) {
+      drawerIndex === this.openDrawerIndex
+        ? (this.openDrawerIndex = null)
+        : (this.openDrawerIndex = drawerIndex);
     }
   }
 };
