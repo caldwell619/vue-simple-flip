@@ -1,10 +1,10 @@
 {
-	"name": "@swbc/vue-simple-flip",
+	"name": "@swbc/simple-vue-components",
 	"version": "1.0.5",
-	"description": "Very simple, yet configurable card flipping Vue component",
-	"main": "dist/vue-simple-flip.ssr.js",
-	"module": "dist/vue-simple-flip.esm.js",
-	"unpkg": "dist/vue-simple-flip.min.js",
+	"description": "Very simple, yet configurable Vue components",
+	"main": "dist/index.ssr.js",
+	"module": "dist/index.esm.js",
+	"unpkg": "dist/index.min.js",
 	"files": [
 		"dist/*"
 	],

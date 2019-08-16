@@ -1,24 +1,40 @@
 # Vue Card Flip
 
-This package is very simple, yet configurable card flipping Vue component.
+This package is a collection of very simple, yet configurable Vue components.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Registering Components](#register-the-component)
+- [Usage](#usage)
+  - [FlipCard](#flipcard)
+  - [Accordion](#accordion)
+  - [AccordionList](#accordionlist)
 
 ## Installation
 
 To install in your project, run:
 
 ```js
-npm i @swbc/vue-simple-flip -S
+npm i @swbc/simple-vue-components -S
 ```
 
 ## Configuration
 
-In the component you wish the card to be, right below the script tag, add:
+This package supports dependency tree shaking, which allows you to destructure your imports.
+
+In the component you wish the package component to be, right below the script tag, add:
 
 ```js
-import FlipCard from "@swbc/vue-simple-flip";
+import { FlipCard } from "@swbc/simple-vue-components";
 ```
 
-Naming convention is obviously up to you.
+The options so far are:
+
+- `FlipCard`
+- `Accordion`
+- `AccordionList`
 
 ### Register the Component
 
