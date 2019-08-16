@@ -46,7 +46,7 @@ if (!argv.format || argv.format === 'es') {
   const esConfig = {
     ...baseConfig,
     output: {
-      file: 'dist/vue-simple-flip.esm.js',
+      file: 'dist/index.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -70,7 +70,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-simple-flip.ssr.js',
+      file: 'dist/index.ssr.js',
       format: 'cjs',
       name: 'VueSimpleFlip',
       exports: 'named',
@@ -97,7 +97,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-simple-flip.min.js',
+      file: 'dist/index.min.js',
       format: 'iife',
       name: 'VueSimpleFlip',
       exports: 'named',
