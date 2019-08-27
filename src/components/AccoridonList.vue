@@ -42,6 +42,18 @@ export default {
           cta: "Click",
           content:
             "Here is some excellent content Here is some excellent content"
+        },
+        {
+          title: "hello",
+          cta: "Click",
+          content:
+            "Here is some excellent content Here is some excellent content"
+        },
+        {
+          title: "hello",
+          cta: "Click",
+          content:
+            "Here is some excellent content Here is some excellent content"
         }
       ],
       openDrawerIndex: null

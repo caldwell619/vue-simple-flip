@@ -1,6 +1,6 @@
 <template>
   <div class="accordion-root">
-    <div :class="`${activeClass} accordion`">
+    <div class="accordion">
       <div class="title-cont">
         <div class="title">
           <slot name="title"></slot>
@@ -27,63 +27,52 @@ export default {
   },
   data() {
     return {
-      showDropDown: this.open,
       elementHeight: 0
     };
   },
-  methods: {
-    newToggle(event) {
-      const panelHeight = this.$el.querySelector(".panel").firstChild
-        .scrollHeight;
-      this.elementHeight = panelHeight;
-      this.showDropDown = !this.showDropDown;
-    }
-  },
   computed: {
     pannelStyle() {
-      return this.open ? { maxHeight: `${this.elementHeight}px` } : {};
+      return this.open ? { maxHeight: `${this.elementHeight}px` } : null;
     },
-    activeClass() {
-      return this.open ? "active" : "";
-    }
   },
   mounted() {
-    const panelHeight = this.$el.querySelector(".panel").firstChild
-      .scrollHeight;
-    this.elementHeight = panelHeight;
+    // this method is very precise, but a costly operation
+    const panelHeight = this.$el.querySelector(".panel").firstChild.offsetHeight;
+    this.elementHeight = panelHeight + 15;
   }
 };
 </script>
 
 <style scoped>
+.accordion-root {
+  width: 100%;
+}
 .title-cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3%;
-  width: 95%;
+  width: 100%;
 }
 .accordion {
-  background-color: #eee;
-  color: #444;
   cursor: pointer;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-  background-color: #ccc;
 }
 
 .panel {
   width: 100%;
-  background-color: white;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.5s;
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  -ms-transition: max-height 0.5s;
+}
+.active {
+  max-height: 100vh;
 }
 </style>
