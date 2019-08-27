@@ -1,6 +1,6 @@
 {
 	"name": "@swbc/simple-vue-components",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Very simple, yet configurable Vue components",
 	"main": "dist/index.ssr.js",
 	"module": "dist/index.esm.js",
