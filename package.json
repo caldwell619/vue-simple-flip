@@ -2,7 +2,7 @@
   "name": "@swbc/simple-vue-components",
   "version": "1.1.0",
   "description": "Very simple, yet configurable Vue components",
-  "main": "dist/index.esm.js",
+  "main": "dist/index.ssr.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.min.js",
   "files": [
