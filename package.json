@@ -1,42 +1,42 @@
 {
-	"name": "@swbc/simple-vue-components",
-	"version": "1.0.10",
-	"description": "Very simple, yet configurable Vue components",
-	"main": "dist/index.ssr.js",
-	"module": "dist/index.esm.js",
-	"unpkg": "dist/index.min.js",
-	"files": [
-		"dist/*"
-	],
-	"homepage": "https://github.com/caldwell619/vue-simple-flip",
-	"bugs": "https://github.com/caldwell619/vue-simple-flip/issues",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:caldwell619/vue-simple-flip.git"
-	},
-	"author": "caldwell619",
-	"scripts": {
-		"dev": "vue serve src/App.vue",
-		"build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
-		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-		"build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-		"release": "standard-version",
-		"publish-release": "git push --follow-tags origin master && npm publish --registry http://d-appadi1:4873",
-		"deploy": "sh scripts/deploy.sh"
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"cross-env": "^5.2.0",
-		"minimist": "^1.2.0",
-		"rollup": "^1.12.1",
-		"rollup-plugin-buble": "^0.19.6",
-		"rollup-plugin-commonjs": "^10.0.0",
-		"rollup-plugin-replace": "^2.2.0",
-		"rollup-plugin-terser": "^4.0.4",
-		"rollup-plugin-vue": "^5.0.0",
-		"standard-version": "^7.0.0",
-		"vue": "^2.6.10",
-		"vue-template-compiler": "^2.6.10"
-	}
+  "name": "@swbc/simple-vue-components",
+  "version": "1.0.10",
+  "description": "Very simple, yet configurable Vue components",
+  "main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.min.js",
+  "files": [
+    "dist/*"
+  ],
+  "homepage": "https://github.com/caldwell619/vue-simple-flip",
+  "bugs": "https://github.com/caldwell619/vue-simple-flip/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:caldwell619/vue-simple-flip.git"
+  },
+  "author": "caldwell619",
+  "scripts": {
+    "dev": "vue serve src/App.vue",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "release": "standard-version",
+    "publish-release": "git push --follow-tags origin master && npm publish --registry http://d-appadi1:4873",
+    "deploy": "sh scripts/deploy.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.12.1",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-vue": "^5.0.0",
+    "standard-version": "^7.0.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

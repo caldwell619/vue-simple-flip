@@ -4,12 +4,12 @@ This package is a collection of very simple, yet configurable Vue components.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Registering Components](#register-the-component)
-- [Usage](#usage)
-  - [FlipCard](#flipcard)
-  - [Accordion](#accordion)
+- [Installation](./#installation)
+- [Configuration](./#configuration)
+- [Registering Components](./#register-the-component)
+- [Usage](./#usage)
+  - [FlipCard](./#flipcard)
+  - [Accordion](./#accordion)
 
 ## Installation
 
@@ -26,7 +26,7 @@ This package supports dependency tree shaking, which allows you to destructure y
 In the component you wish the package component to be, right below the script tag, add:
 
 ```js
-import { FlipCard } from "@swbc/simple-vue-components";
+import { FlipCard } from '@swbc/simple-vue-components'
 ```
 
 The options so far are:
@@ -43,7 +43,7 @@ Inside of your component configuration, register the `FlipCard` by adding:
 export default {
   // stuff
   components: {
-    FlipCard
+    FlipCard,
   },
   // really important stuff
 }
@@ -57,9 +57,7 @@ Inside of your template, use the `<FlipCard>` anywhere you'd like.
 
 ```js
 <template>
-  <FlipCard>
-    // slots
-  </FlipCard>
+  <FlipCard>// slots</FlipCard>
 </template>
 ```
 
@@ -76,8 +74,12 @@ Example with fixed values:
 
 ```js
 <template>
-  <FlipCard height="400px" width="300px"
-    backgroundColor="#ffffff" color="#f3f3f3">
+  <FlipCard
+    height='400px'
+    width='300px'
+    backgroundColor='#ffffff'
+    color='#f3f3f3'
+  >
     // slots
   </FlipCard>
 </template>
@@ -111,27 +113,23 @@ Example:
 
 ```js
 <template>
-  <FlipCard height="400px" width="300px"
-     backgroundColor="#ffffff" color="#f3f3f3">
-    <template slot="front">
-      <div>
-        This content will be on the front of the card.
-      </div>
+  <FlipCard
+    height='400px'
+    width='300px'
+    backgroundColor='#ffffff'
+    color='#f3f3f3'
+  >
+    <template slot='front'>
+      <div>This content will be on the front of the card.</div>
     </template>
-    <template slot="cta-slot-front">
-      <button>
-        This will be the call to action to flip the card
-      </button>
+    <template slot='cta-slot-front'>
+      <button>This will be the call to action to flip the card</button>
     </template>
-    <template slot="back">
-      <div>
-        This content will be on the back of the card.
-      </div>
+    <template slot='back'>
+      <div>This content will be on the back of the card.</div>
     </template>
-    <template slot="cta-slot-back">
-      <i class="superIcon">
-        This could be an icon
-      </i>
+    <template slot='cta-slot-back'>
+      <i class='superIcon'>This could be an icon</i>
     </template>
   </FlipCard>
 </template>
@@ -148,9 +146,7 @@ Inside of your template, use the `<Accordion>` anywhere you'd like.
 
 ```js
 <template>
-  <Accordion>
-    // slots
-  </Accordion>
+  <Accordion>// slots</Accordion>
 </template>
 ```
 
@@ -207,7 +203,6 @@ Example:
 #### Accordion Styles
 
 - The call to action is right aligned
-
 
 ### Using Several Individual Accordions
 
@@ -272,7 +267,7 @@ This implementation is for just passing an array, and getting back a list of sem
 ```html
 // features is an array of objects
 
-<AccordionList :accordions="features">
+<AccordionList :accordions="features"></AccordionList>
 ```
 
 #### Props
@@ -286,11 +281,11 @@ The props schema is as follows:
 ```js
 // accordions
 
-[
+;[
   {
     title: 'STRING', // the title of the Accordion
     cta: 'STRING', // text for the button ( default it a '+' )
-    content: 'STRING' // content to be shown in the drop down
-  }
+    content: 'STRING', // content to be shown in the drop down
+  },
 ]
 ```
